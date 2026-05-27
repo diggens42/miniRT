@@ -67,4 +67,15 @@ fclean: clean
 re: fclean
 	@$(MAKE) all
 
-.PHONY: all clean fclean re
+docker-build:
+	@docker build -t minirt .
+	@echo "$(YELLOW)Docker image 'minirt' built successfully.$(RESET)"
+
+docker-run:
+	@docker run --rm minirt
+	@echo "$(YELLOW)Docker container finished.$(RESET)"
+
+docker: docker-build
+	@echo "$(YELLOW)Build verified in Linux container.$(RESET)"
+
+.PHONY: all clean fclean re docker-build docker-run docker
