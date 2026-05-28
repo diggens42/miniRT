@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/28 17:17:37 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/28 17:27:27 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@
 # define WIN_H 750
 # define WIN_W 1024
 
-typedef enum e_shape {
+typedef enum e_shape_type {
 	SPHERE,
 	CYLINDER,
 	PLANE
-}	t_shape;
+}	t_shape_type;
 
 typedef struct s_tuple {
 	double	x;
@@ -45,52 +45,39 @@ typedef struct s_rgb
 	int	b;
 }	t_rgb;
 
-typedef struct s_coor
-{
-	double	x;
-	double	y;
-	double	z;
-}	t_coor;
-
-typedef struct s_vect
-{
-	double	x;
-	double	y;
-	double	z;
-}	t_vect;
-
 typedef struct s_alight {
 	double	ratio;
-	t_rgb	*rgb;
+	t_rgb	rgb;
 }	t_alight;
 
 typedef struct	s_camera {
-	t_coor	*coor;	// x, y, z coordinates of the viewpoint
-	t_vect	*vect;	// 3D normalized orientation vector, in the range [-1,1] for each x, y, z axis
+	t_tuple	coor;	// x, y, z coordinates of the viewpoint
+	t_tuple	vect;	// 3D normalized orientation vector, in the range [-1,1] for each x, y, z axis
 	double	fov;	// Field of view
 }	t_camera;
 
 typedef struct s_light
 {
-	t_coor	*coor;
+	t_tuple	coor;
 	double	lb_ratio;
-	t_rgb	*rgb;
+	t_rgb	rgb;
 }	t_light;
 
 typedef struct s_shape
 {
-	t_shape	shape;
-	t_coor	*coor;
-	t_rgb	*rgb;
-	double	diameter;
-	double	height;
-};
+	t_shape_type	s_type;
+	t_tuple			coor;
+	t_rgb			rgb;
+	double			diameter;
+	double			height;
+}	t_shape;
 
 typedef struct s_rt {
-	t_alight	*alight;
-	t_light		*light;
-	t_camera	*cam;
+	t_alight	alight;
+	t_light		light;
+	t_camera	cam;
 	t_shape		*shape;
+	int			n_shapes; //shapecount
 }	t_rt;
 
 #endif
