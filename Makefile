@@ -14,10 +14,10 @@ HEADERS	=	./include/miniRT.h
 LIBFT	=	./libft/libft.a
 MLX42	=	./MLX42/build/libmlx42.a
 
-RESET	=	\x1b[0m
-RED		=	\x1b[31m
-YELLOW	=	\x1b[33m
-BLUE	=	\x1b[34m
+RESET	=	\033[0m
+RED		=	\033[0;31m
+YELLOW	=	\033[0;33m
+BLUE	=	\033[0;34m
 
 all: $(LIBFT) $(MLX42) $(NAME)
 
