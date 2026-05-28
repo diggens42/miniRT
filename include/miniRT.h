@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/28 17:09:01 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/28 17:17:37 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 # include "../MLX42/include/MLX42/MLX42.h"
 # include "../libft/libft.h"
-# include <math.h>
-# include <stdio.h>
+# include <math.h> // sinc, cos, sqrt
+# include <stdio.h> // printf, perror
+# include <string.h> // strerror
+# include <stdlib.h> // malloc, free, exit
+# include <unistd.h> // open, close, read, write
+# include <fcntl.h> // open, close, read, write
+# include <sys/time.h> // gettimeofday
 # define WIN_H 750
 # define WIN_W 1024
 
