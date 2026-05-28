@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   miniRT.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtravez <mtravez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/28 16:59:39 by mtravez          ###   ########.fr       */
+/*   Updated: 2026/05/28 17:09:01 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,11 @@ typedef struct s_shape
 	double	height;
 };
 
+typedef struct s_rt {
+	t_alight	*alight;
+	t_light		*light;
+	t_camera	*cam;
+	t_shape		*shape;
+}	t_rt;
 
 #endif
