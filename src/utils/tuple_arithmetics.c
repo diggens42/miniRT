@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 16:55:47 by fwahl             #+#    #+#             */
-/*   Updated: 2026/05/30 17:01:10 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/30 17:26:26 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_tuple	add(t_tuple a, t_tuple b)
 	return (new_tuple(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w));
 }
 
-t_tuple	substract(t_tuple a, t_tuple b)
+t_tuple	subtract(t_tuple a, t_tuple b)
 {
 	return (new_tuple(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w));
 }

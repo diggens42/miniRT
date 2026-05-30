@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 17:31:25 by fwahl             #+#    #+#             */
-/*   Updated: 2026/05/30 16:56:40 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/30 17:22:30 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_tuple	new_point(double x, double y, double z)
 	return (new_tuple(x, y, z, 1.0));
 }
 
-t_tuple	new_vector(double x, double y, double z)
+t_tuple	new_vec(double x, double y, double z)
 {
 	return (new_tuple(x, y, z, 0.0));
 }
