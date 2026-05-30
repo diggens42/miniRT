@@ -6,7 +6,7 @@
 /*   By: mtravez <mtravez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 17:56:35 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/30 18:08:33 by mtravez          ###   ########.fr       */
+/*   Updated: 2026/05/30 18:24:49 by mtravez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,10 @@ void	hardcode_data(t_rt *rt) {
 	rt->cam.coor.y = 0.0;
 	rt->cam.coor.z = 20.0;
 	rt->cam.coor.w = 1.0;
-	rt->cam.vect.x = 0.0;
-	rt->cam.vect.y = 0.0;
-	rt->cam.vect.z = 1.0;
-	rt->cam.vect.w = 0.0;
+	rt->cam.vec.x = 0.0;
+	rt->cam.vec.y = 0.0;
+	rt->cam.vec.z = 1.0;
+	rt->cam.vec.w = 0.0;
 	rt->cam.fov = 70.0;
 		
 	rt->light.coor.x = -40.0;
@@ -103,10 +103,10 @@ void	hardcode_data(t_rt *rt) {
 	shape->coor.z = 0.0;
 	shape->coor.w = 1.0;
 
-	shape->vect.x = 0.0;
-	shape->vect.y = 1.0;
-	shape->vect.z = 0.0;
-	shape->vect.w = 0.0;
+	shape->vec.x = 0.0;
+	shape->vec.y = 1.0;
+	shape->vec.z = 0.0;
+	shape->vec.w = 0.0;
 		
 	shape->rgb.r = 255;
 	shape->rgb.g = 0;
@@ -127,10 +127,10 @@ void	hardcode_data(t_rt *rt) {
 	sphere->coor.z = 20.0;
 	sphere->coor.w = 1.0;
 
-	sphere->vect.x = 0.0;
-	sphere->vect.y = 0.0;
-	sphere->vect.z = 0.0;
-	sphere->vect.w = 0.0;
+	sphere->vec.x = 0.0;
+	sphere->vec.y = 0.0;
+	sphere->vec.z = 0.0;
+	sphere->vec.w = 0.0;
 	
 	sphere->rgb.r = 255;
 	sphere->rgb.g = 0;
@@ -150,10 +150,10 @@ void	hardcode_data(t_rt *rt) {
 	cylinder->coor.z = 20.6;
 	cylinder->coor.w = 1.0;
 
-	cylinder->vect.x = 0.0;
-	cylinder->vect.y = 0.0;
-	cylinder->vect.z = 1.0;
-	cylinder->vect.w = 0.0;
+	cylinder->vec.x = 0.0;
+	cylinder->vec.y = 0.0;
+	cylinder->vec.z = 1.0;
+	cylinder->vec.w = 0.0;
 	
 	cylinder->rgb.r = 10;
 	cylinder->rgb.g = 0;

@@ -6,7 +6,7 @@
 /*   By: mtravez <mtravez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/30 18:12:22 by mtravez          ###   ########.fr       */
+/*   Updated: 2026/05/30 18:24:40 by mtravez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ typedef struct s_shape
 {
 	t_shape_type	s_type;
 	t_tuple			coor;
-	t_tuple			vect;
+	t_tuple			vec;
 	t_rgb			rgb;
 	double			diameter;
 	double			height;
