@@ -6,7 +6,7 @@
 /*   By: mtravez <mtravez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 17:56:35 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/30 18:24:49 by mtravez          ###   ########.fr       */
+/*   Updated: 2026/05/30 19:48:55 by mtravez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,47 +70,24 @@ void	free_shape_lst(t_rt *rt)
 
 void	hardcode_data(t_rt *rt) {	
 	rt->alight.ratio = 0.2;
-	rt->alight.rgb.r = 255;
-	rt->alight.rgb.g = 255;
-	rt->alight.rgb.b = 255;
+	rt->alight.rgb = (t_rgb){255, 255, 255};
 		
-	rt->cam.coor.x = -50.0;
-	rt->cam.coor.y = 0.0;
-	rt->cam.coor.z = 20.0;
-	rt->cam.coor.w = 1.0;
-	rt->cam.vec.x = 0.0;
-	rt->cam.vec.y = 0.0;
-	rt->cam.vec.z = 1.0;
-	rt->cam.vec.w = 0.0;
+	rt->cam.coor = (t_tuple){-50.0, 0.0, 20.0, 1.0};
+	rt->cam.vec = (t_tuple){0.0, 0.0, 1.0, 0.0};
 	rt->cam.fov = 70.0;
 		
-	rt->light.coor.x = -40.0;
-	rt->light.coor.y = 0.0;
-	rt->light.coor.z = 30.0;
-	rt->light.coor.w = 1.0;
+	rt->light.coor = (t_tuple) {-40.0, 0.0, 30.0, 1.0};
 	rt->light.lb_ratio = 0.7;
-	rt->light.rgb.r = 255;
-	rt->light.rgb.g = 255;
-	rt->light.rgb.b = 255;
+	rt->light.rgb = (t_rgb){255, 255, 255};
 
 	t_shape *shape;
 
 	shape = malloc(sizeof(t_shape));
 	if (!shape)
 		return;
-	shape->coor.x = 0.0;
-	shape->coor.y = 0.0;
-	shape->coor.z = 0.0;
-	shape->coor.w = 1.0;
-
-	shape->vec.x = 0.0;
-	shape->vec.y = 1.0;
-	shape->vec.z = 0.0;
-	shape->vec.w = 0.0;
-		
-	shape->rgb.r = 255;
-	shape->rgb.g = 0;
-	shape->rgb.b = 255;
+	shape->coor = (t_tuple){0.0, 0.0, 0.0, 1.0};
+	shape->vec = (t_tuple) {0.0, 1.0, 0.0, 0.0};	
+	shape->rgb = (t_rgb){255, 0, 255};
 	
 	shape->diameter = 0.0;
 	shape->height = 0.0;
@@ -122,19 +99,9 @@ void	hardcode_data(t_rt *rt) {
 	sphere = malloc(sizeof(t_shape));
 	if (!sphere)
 		return;
-	sphere->coor.x = 0.0;
-	sphere->coor.y = 0.0;
-	sphere->coor.z = 20.0;
-	sphere->coor.w = 1.0;
-
-	sphere->vec.x = 0.0;
-	sphere->vec.y = 0.0;
-	sphere->vec.z = 0.0;
-	sphere->vec.w = 0.0;
-	
-	sphere->rgb.r = 255;
-	sphere->rgb.g = 0;
-	sphere->rgb.b = 0;
+	sphere->coor = (t_tuple){0.0, 0.0, 20.0, 1.0};
+	sphere->vec = (t_tuple) {0.0, 0.0, 0.0, 0.0};
+	sphere->rgb = (t_rgb) {255, 0, 0};
 	
 	sphere->diameter = 20.0;
 	sphere->height = 0.0;
@@ -145,19 +112,9 @@ void	hardcode_data(t_rt *rt) {
 	cylinder = malloc(sizeof(t_shape));
 	if (!cylinder)
 		return;
-	cylinder->coor.x = 50.0;
-	cylinder->coor.y = 0.0;
-	cylinder->coor.z = 20.6;
-	cylinder->coor.w = 1.0;
-
-	cylinder->vec.x = 0.0;
-	cylinder->vec.y = 0.0;
-	cylinder->vec.z = 1.0;
-	cylinder->vec.w = 0.0;
-	
-	cylinder->rgb.r = 10;
-	cylinder->rgb.g = 0;
-	cylinder->rgb.b = 255;
+	cylinder->coor = (t_tuple){50.0, 0.0, 20.6, 1.0};
+	cylinder->vec = (t_tuple){0.0, 0.0, 1.0, 0.0};
+	cylinder->rgb = (t_rgb){10, 0, 255};
 	
 	cylinder->diameter = 14.2;
 	cylinder->height = 21.42;
