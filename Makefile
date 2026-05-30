@@ -8,6 +8,7 @@ MLX_URL =	https://github.com/codam-coding-college/MLX42.git
 
 NAME	=	miniRT
 SRCS	=	./src/main.c \
+			./src/parse.c \
 			./src/utils/tuple_arithmetics.c \
 			./src/utils/tuple_create.c \
 			./src/utils/tuple_vec_ops.c

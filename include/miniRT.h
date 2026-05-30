@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   miniRT.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: mtravez <mtravez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/30 17:36:02 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/30 18:12:22 by mtravez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ typedef struct s_shape
 {
 	t_shape_type	s_type;
 	t_tuple			coor;
+	t_tuple			vect;
 	t_rgb			rgb;
 	double			diameter;
 	double			height;
@@ -76,8 +77,7 @@ typedef struct s_rt {
 	t_alight	alight;
 	t_light		light;
 	t_camera	cam;
-	t_shape		*shape;
-	int			n_shapes; //shapecount
+	t_list		*shapes;
 }	t_rt;
 
 // functions
@@ -99,6 +99,9 @@ double	magnitude(t_tuple vec);
 t_tuple	normalize(t_tuple vec);
 double	dot(t_tuple vec_a, t_tuple vec_b);
 t_tuple	cross(t_tuple vec_a, t_tuple vec_b);
+
+void	hardcode_data(t_rt *rt);
+void	free_shape_lst(t_rt *rt);
 
 
 #endif
