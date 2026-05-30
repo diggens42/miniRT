@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 17:05:19 by fwahl             #+#    #+#             */
-/*   Updated: 2026/05/30 18:04:14 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/30 19:23:50 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ double	dot(t_tuple vec_a, t_tuple vec_b)
 		+ vec_a.z * vec_b.z + vec_a.w * vec_b.w);
 }
 
-/** cross product - returns vec perpendicular to both inputs (right-hand rule) */
+/** cross product - returns vec perpendicular (right-hand rule) */
 t_tuple	cross(t_tuple vec_a, t_tuple vec_b)
 {
 	return (new_vec(vec_a.y * vec_b.z - vec_a.z * vec_b.y,
