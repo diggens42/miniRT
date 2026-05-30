@@ -6,7 +6,7 @@
 /*   By: fwahl <fwahl@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:06:41 by mtravez           #+#    #+#             */
-/*   Updated: 2026/05/28 17:45:58 by fwahl            ###   ########.fr       */
+/*   Updated: 2026/05/30 17:03:49 by fwahl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_tuple {
 	double	x;
 	double	y;
 	double	z;
-	double	w; 
+	double	w;
 }	t_tuple;
 
 typedef struct s_rgb
@@ -89,6 +89,9 @@ t_tuple	new_point(double x, double y, double z);
 
 t_tuple	add(t_tuple a, t_tuple b);
 t_tuple	substract(t_tuple a, t_tuple b);
+t_tuple	negate(t_tuple a);
+t_tuple	multiply(t_tuple a, double scalar);
+t_tuple	divide(t_tuple a, double scalar);
 
 
 
